@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="bower_components/bootstrap.css/css/bootstrap.css" rel="stylesheet"/>
+    <link href="bower_components/bootstrap.css/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="bower_components/pickadate/lib/themes/default.css" rel="stylesheet"/>
+    <link href="bower_components/pickadate/lib/themes/default.date.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span10 offset1">
+            <h1>Hello World</h1>
+            <form>
+                <div>
+                    <input type="date"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap.css/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/pickadate/lib/picker.js"></script>
+<script type="text/javascript" src="bower_components/pickadate/lib/picker.date.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("input[type=date]").pickadate({
+            format:"mm/dd/yyyy",
+            disable:[
+            1,7,
+                    new Date(2014,12,25)
+            ]
+        });
+    });
+</script>
+
+</body>
+</html>
